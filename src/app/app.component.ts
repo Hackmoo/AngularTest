@@ -20,8 +20,10 @@ export class AppComponent {
     'fa-brands fa-github-square fa-5x',
   ];
   getRandomIcon(): void{
-    setTimeout(() => {
-      this.currentVariant = Math.round(Math.random() * this.variants.length)
-    }, 3000)
+    // setTimeout(() => {
+    //   this.currentVariant = Math.round(Math.random() * this.variants.length)
+    // }, 3000)
+    this.currentVariant = Math.round(Math.random() * this.variants.length - 1)
+    console.log(this.currentVariant)
   }
 }
