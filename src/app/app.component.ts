@@ -21,7 +21,8 @@ export class AppComponent {
   ];
   getRandomIcon(): void{
     setTimeout(() => {
-      this.currentVariant = Math.round(Math.random() * this.variants.length - 1)
+      let temp = Math.round(Math.random() * this.variants.length - 1)
+      temp < 0 ? this.currentVariant = 0 : this.currentVariant = temp
     }, 3000)
   }
 }
